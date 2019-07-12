@@ -39,5 +39,9 @@ export default [
     path: '/upgrade',
     name: 'Upgrade to PRO',
     view: 'Upgrade'
+  },
+  {
+    path: '/user-profile-details',
+    view: 'UserProfileDetails'
   }
 ]
