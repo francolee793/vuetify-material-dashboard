@@ -51,9 +51,10 @@
           right>
           <v-img
             :gradient="sidebarOverlayGradiant"
-            src="/img/drawer_background2.jpg"
-            height="100%">
-            <v-container>
+            height="100%"
+            style="background-image: linear-gradient(rgba(29, 19, 19, 0.50), rgba(29, 19, 19, 0.50)), url(/img/drawer_background2.jpg)">
+            <v-container
+              dark>
               <v-layout
                 align-center
                 justify-center
@@ -64,7 +65,7 @@
                       class="mx-auto d-block"
                       size="120">
                       <div
-                        v-viewer="{movable: false}"
+                        v-viewer="options"
                         class="images">
                         <img
                           v-for="src in images"
@@ -142,7 +143,18 @@ export default {
     ],
     images: [
       'https://randomuser.me/api/portraits/men/85.jpg'
-    ]
+    ],
+    options: {
+      toolbar: {
+        zoomIn: 1,
+        zoomOut: 1,
+        reset: 1,
+        play: {
+          show: 1,
+          size: 'large'
+        }
+      }
+    }
   }),
   methods: {
     show () {
