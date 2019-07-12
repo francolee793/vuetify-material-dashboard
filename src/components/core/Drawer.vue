@@ -121,6 +121,11 @@ export default {
         to: '/notifications',
         icon: 'mdi-bell',
         text: 'Notifications'
+      },
+      {
+        to: '/user-profile-details',
+        icon: 'mdi-account',
+        text: 'User Profile Details'
       }
     ],
     responsive: false
